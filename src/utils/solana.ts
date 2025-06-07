@@ -304,7 +304,6 @@ export function calculateDynamicPda(
  */
 export function formatSeedForDisplay(
   seed: IdlSeed,
-  seedBuffer?: Buffer,
   args?: Record<string, any>,
   accounts?: Record<string, PublicKey>
 ): string {
@@ -398,7 +397,7 @@ export function populatePdaAddresses(
           const [address, bump] = result;
           // Generate human-readable seed descriptions
           const seedDescriptions = account.pda.seeds.map((seed) =>
-            formatSeedForDisplay(seed, undefined, args, currentAccounts)
+            formatSeedForDisplay(seed, args, currentAccounts)
           );
 
           return {
@@ -416,7 +415,7 @@ export function populatePdaAddresses(
     // Check if this account has PDA info but no calculated address (static PDA)
     if (account?.pda && input.value) {
       const seedDescriptions = account.pda.seeds.map((seed) =>
-        formatSeedForDisplay(seed, undefined, args, currentAccounts)
+        formatSeedForDisplay(seed, args, currentAccounts)
       );
 
       return {

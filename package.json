@@ -2,6 +2,7 @@
   "name": "solana-program-interface",
   "private": true,
   "version": "0.1.0",
+  "description": "A modern React interface for interacting with Solana programs via IDL files. Features wallet integration, automatic form generation, PDA calculation, and multi-network support.",
   "type": "module",
   "scripts": {
     "dev": "vite",
