@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
+      buffer: 'buffer',
     },
   },
   define: {
@@ -20,6 +21,7 @@ export default defineConfig({
       '@solana/wallet-adapter-react',
       '@solana/wallet-adapter-react-ui',
       '@solana/wallet-adapter-wallets',
+      'buffer',
     ],
   },
   server: {
